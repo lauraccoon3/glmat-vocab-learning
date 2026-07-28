@@ -11,8 +11,9 @@
   </style>
   <style>
     /* Playful visual theme — functionality remains in the original styles/scripts. */
+    @import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Jua&display=swap');
     :root{--ink:#443252;--muted:#806f8b;--paper:#fff7fc;--card:#fffdfd;--line:#efddec;--brand:#f16ca6;--brand2:#8e72e8;--ok:#39ae83;--bad:#ed7180;--warn:#ffc85a}
-    body{min-height:100vh;background:radial-gradient(circle at 8% 9%,#ffe0ee 0 10%,transparent 26%),radial-gradient(circle at 93% 16%,#e8ddff 0 9%,transparent 24%),linear-gradient(145deg,#fff9fd,#f6f1ff 56%,#fff7ee);font-family:ui-rounded,"Nunito","Malgun Gothic",sans-serif}
+    body{min-height:100vh;background:radial-gradient(circle at 8% 9%,#ffe0ee 0 10%,transparent 26%),radial-gradient(circle at 93% 16%,#e8ddff 0 9%,transparent 24%),linear-gradient(145deg,#fff9fd,#f6f1ff 56%,#fff7ee);font-family:"Gowun Dodum","Malgun Gothic",sans-serif;font-weight:600}button{font-family:inherit}.hero h1,.section-title h2,.round b{font-family:"Jua","Gowun Dodum",sans-serif;font-weight:400;letter-spacing:.1px}
     body:before,body:after{content:"";position:fixed;z-index:0;border-radius:999px;filter:blur(1px);pointer-events:none}body:before{width:155px;height:155px;background:#ffd0e8;left:-57px;bottom:8%;opacity:.6}body:after{width:105px;height:105px;background:#d8c8ff;right:-31px;bottom:19%;opacity:.58}
     .shell{position:relative;z-index:1;padding-top:38px}.cute-spark{position:fixed;z-index:0;pointer-events:none;font-size:28px;filter:drop-shadow(0 3px 2px #ffffff99);animation:float 4.4s ease-in-out infinite}.spark-one{top:15%;left:5%}.spark-two{top:34%;right:5%;animation-delay:-1.9s}.spark-three{bottom:8%;left:12%;font-size:21px;animation-delay:-.8s}@keyframes float{50%{transform:translateY(-10px) rotate(8deg)}}
     .hero{padding:23px 25px;background:linear-gradient(120deg,#fffdfdcb,#fff2f8d9 56%,#f0eaffd6);border:1px solid #fff;box-shadow:0 13px 32px #c982aa24;border-radius:28px;margin-bottom:18px;position:relative;overflow:hidden}.hero:after{content:"✦ ･ﾟ✧";position:absolute;right:22px;top:12px;color:#d88abb;font-size:14px;letter-spacing:4px}.hero h1{font-weight:900;color:#563661;text-shadow:0 2px #fff}.hero p{font-weight:600}.streak{background:linear-gradient(135deg,#ffd2e7,#e5d9ff);color:#784469;border:1px solid #fff;box-shadow:0 4px 12px #d798c449}
@@ -24,7 +25,7 @@
   </style>
 </head>
 <body><span class="cute-spark spark-one" aria-hidden="true">✦</span><span class="cute-spark spark-two" aria-hidden="true">♡</span><span class="cute-spark spark-three" aria-hidden="true">✿</span><main class="shell">
-  <header class="hero"><div class="hero-copy"><h1>글맛대첩 어휘 학습</h1><p>200개 어휘를 4회차로, 틀린 문제는 끝까지 다시 풀어요.</p></div><div class="mascot-wrap"><img class="mascot" src="vocab-bunny-mascot.png" alt="보라색 단어책을 든 글맛 토끼" /></div><div class="streak" id="status">학습 기록을 불러오는 중</div></header>
+  <header class="hero"><div class="hero-copy"><h1>글맛대첩 어휘 학습</h1><p>오늘 한 단어씩, 토끼 친구와 함께 차근차근 완주해 봐요! ✨</p></div><div class="mascot-wrap"><img class="mascot" src="vocab-bunny-mascot.png" alt="보라색 단어책을 든 글맛 토끼" /></div><div class="streak" id="status">학습 기록을 불러오는 중</div></header>
   <nav class="tabs" aria-label="학습 메뉴"><button class="tab active" data-view="home">대시보드</button><button class="tab" data-view="quiz">회차 학습</button><button class="tab" data-view="retry">오답 재시험</button><button class="tab" data-view="match">매칭 게임</button><button class="tab" data-view="words">전체 단어</button></nav>
   <section class="view active" id="home"></section><section class="view" id="quiz"></section><section class="view" id="retry"></section><section class="view" id="match"></section><section class="view" id="words"></section>
 </main><script>
